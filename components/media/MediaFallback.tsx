@@ -9,7 +9,7 @@ export default function MediaFallback({ src, kind }: { src: string; kind: "image
       aria-hidden="true"
     >
       <span className="font-body text-xs text-brass">
-        {kind === "video" ? "video · " : "image · "}
+        {kind === "video" ? "video " : "image "}
         {filenameOf(src)}
       </span>
     </div>
