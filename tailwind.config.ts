@@ -17,7 +17,10 @@ const config: Config = {
       wine: "#5E1F32",
       ecru: "#EFE7D6",
       brass: "#A8813F",
+      // darker brass for small type on light grounds (AA against chalk/sand)
+      "brass-deep": "#8A6A2F",
       chalk: "#FAF7F0",
+      sand: "#EDE3D0",
     },
     fontFamily: {
       display: ["var(--font-display)", "Georgia", "serif"],

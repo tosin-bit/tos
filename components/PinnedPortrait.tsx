@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Section from "@/components/Section";
 import MediaImage from "@/components/media/MediaImage";
+import type { Tone } from "@/components/graphics/PlaceholderArt";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,10 +14,19 @@ type Props = {
   src: string;
   alt: string;
   aspect?: string;
+  className?: string;
+  tone?: Tone;
   children: React.ReactNode;
 };
 
-export default function PinnedPortrait({ src, alt, aspect = "4 / 5", children }: Props) {
+export default function PinnedPortrait({
+  src,
+  alt,
+  aspect = "4 / 5",
+  className = "bg-indigo",
+  tone = "dark",
+  children,
+}: Props) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const portraitRef = useRef<HTMLDivElement>(null);
 
@@ -41,10 +51,10 @@ export default function PinnedPortrait({ src, alt, aspect = "4 / 5", children }:
   }, []);
 
   return (
-    <Section as="div" className="bg-indigo">
+    <Section as="div" className={className}>
       <div ref={wrapRef} className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div ref={portraitRef} className="lg:col-span-5">
-          <MediaImage src={src} alt={alt} aspect={aspect} art="portrait" />
+          <MediaImage src={src} alt={alt} aspect={aspect} art="portrait" tone={tone} />
         </div>
         <div className="flex flex-col gap-10 lg:col-span-6 lg:col-start-7">{children}</div>
       </div>

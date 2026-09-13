@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import MediaFallback from "./MediaFallback";
 import useMediaMissing from "./useMediaMissing";
-import type { ArtKind } from "@/components/graphics/PlaceholderArt";
+import type { ArtKind, Tone } from "@/components/graphics/PlaceholderArt";
 import { prefersReducedMotion } from "@/lib/motion";
 
 type Props = {
@@ -15,6 +15,7 @@ type Props = {
   cursorWord?: string;
   poster?: string;
   art?: ArtKind;
+  tone?: Tone;
 };
 
 export default function MediaVideo({
@@ -26,6 +27,7 @@ export default function MediaVideo({
   cursorWord = "watch",
   poster,
   art = "scene",
+  tone = "dark",
 }: Props) {
   const [reduced, setReduced] = useState(false);
   const [playing, setPlaying] = useState(true);
@@ -52,7 +54,7 @@ export default function MediaVideo({
 
   return (
     <div
-      className={`relative overflow-hidden bg-indigo ${className}`}
+      className={`relative overflow-hidden ${tone === "light" ? "bg-sand" : "bg-indigo"} ${className}`}
       style={{ aspectRatio: aspect }}
       data-cursor-word={cursorWord}
       role="group"
@@ -83,7 +85,7 @@ export default function MediaVideo({
           ) : null}
         </>
       ) : (
-        <MediaFallback src={src} art={art} />
+        <MediaFallback src={src} art={art} tone={tone} />
       )}
     </div>
   );

@@ -14,6 +14,8 @@ const GROUND = {
   indigo: "#1C1B3A",
   wine: "#5E1F32",
   deep: "#16152F",
+  sand: "#EDE3D0",
+  chalk: "#F5EFE2",
 } as const;
 
 type Props = {
@@ -31,8 +33,10 @@ export default function TextilePattern({
 }: Props) {
   const uid = useId().replace(/[:]/g, "");
   const patternId = `tx-${motif}-${uid}`;
-  const brass = "#A8813F";
-  const ecru = "#EFE7D6";
+  const light = ground === "sand" || ground === "chalk";
+  const brass = light ? "#8A6A2F" : "#A8813F";
+  // the second ink reads against its ground: pale on dark, indigo on light
+  const ecru = light ? "#1C1B3A" : "#EFE7D6";
 
   return (
     <svg

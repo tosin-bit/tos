@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import MediaFallback from "./MediaFallback";
-import type { ArtKind } from "@/components/graphics/PlaceholderArt";
+import type { ArtKind, Tone } from "@/components/graphics/PlaceholderArt";
 
 type Props = {
   src: string;
@@ -11,6 +11,7 @@ type Props = {
   className?: string;
   cursorWord?: string;
   art?: ArtKind;
+  tone?: Tone;
 };
 
 export default function MediaImage({
@@ -20,12 +21,13 @@ export default function MediaImage({
   className = "",
   cursorWord,
   art = "scene",
+  tone = "dark",
 }: Props) {
   const [hasError, setHasError] = useState(false);
 
   return (
     <div
-      className={`relative overflow-hidden bg-indigo ${className}`}
+      className={`relative overflow-hidden ${tone === "light" ? "bg-sand" : "bg-indigo"} ${className}`}
       style={{ aspectRatio: aspect }}
       data-cursor-word={cursorWord}
     >
@@ -38,7 +40,7 @@ export default function MediaImage({
           onError={() => setHasError(true)}
         />
       ) : (
-        <MediaFallback src={src} art={art} />
+        <MediaFallback src={src} art={art} tone={tone} />
       )}
     </div>
   );

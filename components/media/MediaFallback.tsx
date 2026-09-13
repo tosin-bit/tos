@@ -1,5 +1,13 @@
-import PlaceholderArt, { type ArtKind } from "@/components/graphics/PlaceholderArt";
+import PlaceholderArt, { type ArtKind, type Tone } from "@/components/graphics/PlaceholderArt";
 
-export default function MediaFallback({ src, art = "scene" }: { src: string; art?: ArtKind }) {
-  return <PlaceholderArt src={src} kind={art} />;
+export default function MediaFallback({
+  src,
+  art = "scene",
+  tone = "dark",
+}: {
+  src: string;
+  art?: ArtKind;
+  tone?: Tone;
+}) {
+  return <PlaceholderArt src={src} kind={art} tone={tone} />;
 }

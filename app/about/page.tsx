@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Section, { SectionLabel } from "@/components/Section";
 import ClipReveal from "@/components/ClipReveal";
+import MediaBand from "@/components/MediaBand";
 import MediaImage from "@/components/media/MediaImage";
 import PinnedPortrait from "@/components/PinnedPortrait";
 import { biography, theWork, vision } from "@/lib/content";
@@ -12,49 +13,66 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
+const WORK_IMAGES = [
+  "/media/img/work-utg-scholarship.jpg",
+  "/media/img/about-healthcare.jpg",
+  "/media/img/about-women-money.jpg",
+  "/media/img/about-convening.jpg",
+];
+
 export default function AboutPage() {
   return (
-    <main className="pt-28">
-      <Section as="div" id="biography" className="pb-0">
-        <SectionLabel>Biography</SectionLabel>
-        <h1 className="max-w-[16ch] font-display text-4xl leading-[1.05] text-ecru">
+    <main className="bg-chalk pt-28 text-indigo">
+      <Section as="div" id="biography" className="pb-12">
+        <SectionLabel className="text-brass-deep">Biography</SectionLabel>
+        <h1 className="max-w-[16ch] font-display text-4xl leading-[1.05] text-indigo">
           {biography.title}
         </h1>
       </Section>
+
+      <MediaBand
+        src="/media/img/portrait-hero.jpg"
+        alt="Nenneh Cheyassin Secka-Kebe in a gold headwrap and turquoise embroidered dress"
+        height="h-[62svh]"
+        objectPosition="50% 30%"
+        art="portrait" tone="light"
+      />
 
       <PinnedPortrait
         src="/media/img/portrait-seated.jpg"
         alt="Nenneh Cheyassin Secka-Kebe in a blue and white embroidered outfit with gold jewellery"
         aspect="1066 / 1132"
+        className="bg-chalk"
+        tone="light"
       >
         {biography.sections.map((section) => (
           <div key={section.heading ?? "opening"} className="flex flex-col gap-6">
             {section.heading ? (
-              <h2 className="mt-8 font-display text-3xl text-ecru">{section.heading}</h2>
+              <h2 className="mt-8 font-display text-3xl text-indigo">{section.heading}</h2>
             ) : null}
             {section.paragraphs.map((paragraph) => (
               <p
                 key={paragraph}
-                className="max-w-measure font-body text-lg leading-relaxed text-ecru/85"
+                className="max-w-measure font-body text-lg leading-relaxed text-indigo/80"
               >
                 {paragraph}
               </p>
             ))}
             {section.quote ? (
-              <blockquote className="max-w-measure border-l border-brass pl-6 font-display text-2xl leading-snug text-ecru">
+              <blockquote className="max-w-measure border-l-2 border-brass pl-6 font-display text-2xl leading-snug text-indigo">
                 &ldquo;{section.quote}&rdquo;
               </blockquote>
             ) : null}
             {section.after?.map((paragraph) => (
               <p
                 key={paragraph}
-                className="max-w-measure font-body text-lg leading-relaxed text-ecru/85"
+                className="max-w-measure font-body text-lg leading-relaxed text-indigo/80"
               >
                 {paragraph}
               </p>
             ))}
             {section.closingQuote ? (
-              <blockquote className="max-w-measure border-l border-brass pl-6 font-display text-2xl leading-snug text-ecru">
+              <blockquote className="max-w-measure border-l-2 border-brass pl-6 font-display text-2xl leading-snug text-indigo">
                 &ldquo;{section.closingQuote}&rdquo;
               </blockquote>
             ) : null}
@@ -62,12 +80,52 @@ export default function AboutPage() {
         ))}
       </PinnedPortrait>
 
-      <Section as="div" id="the-work" className="bg-chalk text-indigo">
-        <SectionLabel className="text-brass">The work</SectionLabel>
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-          {theWork.map((block) => (
-            <div key={block.title} className="border-t border-brass/40 pt-6">
-              <h2 className="font-display text-2xl text-indigo">{block.title}</h2>
+      <Section as="div" className="bg-chalk pt-0">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <ClipReveal direction="left">
+            <MediaImage
+              src="/media/img/archive-father.jpg"
+              alt="Pap Ousman Cheyassin Secka — archival photograph"
+              aspect="4 / 5"
+              art="portrait" tone="light"
+            />
+          </ClipReveal>
+          <ClipReveal direction="right" className="md:mt-20">
+            <MediaImage
+              src="/media/img/archive-family.jpg"
+              alt="Family archival photograph"
+              aspect="4 / 5"
+              art="detail" tone="light"
+            />
+          </ClipReveal>
+        </div>
+        <p className="mt-6 font-body text-sm text-brass-deep">
+          Archive — her father, Pap Ousman Cheyassin Secka
+        </p>
+      </Section>
+
+      <MediaBand
+        src="/media/video/statement-broll.mp4"
+        kind="video"
+        alt="Ambient footage of Nenneh Cheyassin Secka-Kebe"
+        height="h-[75svh]"
+        art="scene" tone="light"
+      />
+
+      <Section as="div" id="the-work" className="bg-sand text-indigo">
+        <SectionLabel className="text-brass-deep">The work</SectionLabel>
+        <div className="grid grid-cols-1 gap-x-10 gap-y-16 md:grid-cols-2">
+          {theWork.map((block, i) => (
+            <div key={block.title} className={i % 2 === 1 ? "md:mt-20" : ""}>
+              <ClipReveal direction={i % 2 === 0 ? "left" : "right"}>
+                <MediaImage
+                  src={WORK_IMAGES[i]}
+                  alt={block.title}
+                  aspect={i % 2 === 0 ? "4 / 3" : "1 / 1"}
+                  art="scene" tone="light"
+                />
+              </ClipReveal>
+              <h2 className="mt-6 font-display text-2xl text-indigo">{block.title}</h2>
               <p className="mt-4 max-w-measure font-body text-lg leading-relaxed text-indigo/80">
                 {block.body}
               </p>
@@ -76,7 +134,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section as="div" id="vision" className="bg-indigo">
+      <Section as="div" id="vision" className="bg-indigo text-ecru">
         <SectionLabel>Vision</SectionLabel>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="flex flex-col gap-7 lg:col-span-7">
