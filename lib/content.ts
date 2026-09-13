@@ -138,6 +138,18 @@ export const journal = [
   { title: "Sunu Réew, Eye Africa TV", date: "October 2025" },
 ];
 
+export const fashion = [
+  { src: "/media/img/portrait-hero.jpg", caption: "Black and gold, hand-embroidered", aspect: "1066 / 1600" },
+  { src: "/media/img/portrait-intro.jpg", caption: "Grand boubou", aspect: "1066 / 1600" },
+  { src: "/media/img/portrait-blackgold.jpg", caption: "Gold on black", aspect: "1066 / 1600" },
+  { src: "/media/img/portrait-biography.jpg", caption: "Turquoise lace", aspect: "1066 / 1600" },
+  { src: "/media/img/portrait-teal.jpg", caption: "Turquoise, with wrap", aspect: "1066 / 1600" },
+  { src: "/media/img/portrait-rose.jpg", caption: "Rose", aspect: "798 / 1600" },
+  { src: "/media/img/portrait-brown.jpg", caption: "Brown and gold", aspect: "1036 / 1600" },
+  { src: "/media/img/portrait-contact.jpg", caption: "White and gold", aspect: "1102 / 1600" },
+  { src: "/media/img/portrait-candid.jpg", caption: "White lace, gold", aspect: "898 / 1600" },
+];
+
 export const closing = { line: "Let's build something." };
 
 /* ── About ───────────────────────────────────────────────────── */

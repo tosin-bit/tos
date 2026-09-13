@@ -10,6 +10,8 @@ import JournalSection from "@/components/sections/JournalSection";
 import ClosingSection from "@/components/sections/ClosingSection";
 import MediaBand from "@/components/MediaBand";
 import VideoFeature from "@/components/VideoFeature";
+import FashionGallery from "@/components/FashionGallery";
+import Section, { SectionLabel } from "@/components/Section";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -48,13 +50,10 @@ export default function HomePage() {
       <InitiativesSection />
       <QuoteWallSection />
 
-      <MediaBand
-        src="/media/video/conversation-clip.mp4"
-        kind="video"
-        alt="A clip from The Conversation series"
-        height="h-[70svh]"
-        art="detail"
-      />
+      <Section className="bg-indigo pb-0">
+        <SectionLabel>She likes fashion</SectionLabel>
+      </Section>
+      <FashionGallery />
 
       <JournalSection />
       <ClosingSection />
