@@ -2,114 +2,117 @@ export const FULL_NAME = "Nenneh Cheyassin Secka-Kebe";
 
 export const opening = {
   name: ["Nenneh", "Cheyassin", "Secka-Kebe"],
-  line: "She does not wait to be invited into the room.",
+  line: "Nurse. Businesswoman. Philanthropist. Gambian.",
 };
 
+/* Her own words, verbatim from published interviews. */
 export const statement = {
+  quote: "I felt like my life began at 50.",
+  source: "The Point, 8 August 2025",
   paragraph:
-    "I worked for thirty years so that I would never have to ask anyone's permission. I built a business, I raised the people around me, and I came home. What I do now is simpler than it sounds: I put people in the same room who would otherwise never sit together, and I stay until something real comes out of it.",
+    "She was born in the United States in 1971, built a career in care in Virginia over sixteen years, and came home to The Gambia. What she does now — scholarships, boreholes, the unglamorous work that keeps a community standing — began on the other side of fifty.",
 };
 
 export const story = {
   paragraphs: [
-    "I left Banjul as a young woman and spent sixteen years building a residential care business in the United States. Nursing gave me the discipline. A graduate business degree gave me the language. Neither gave me patience for waiting on someone else's timeline.",
-    "My father was Attorney General and Minister of Justice. I grew up watching him take a room seriously — not performing for it, taking it seriously. I did not understand until much later that this was the inheritance.",
-    "I retired at fifty and came home. Not to slow down. I came home because there was more room here to build the thing I actually wanted to build — a life organised around people, not around a title.",
-    "What I found was a country full of women doing extraordinary work with no one answering the phone for them. So I decided to be the one who answers.",
+    "Nenneh Cheyassin Secka-Kebe was born in the United States in 1971 and raised across several countries. Her father was Pap Ousman Cheyassin Secka. She studied business administration and marketing, took an MBA, and qualified in nursing — an account she gives in her own interviews.",
+    "With her sister she built a residential care organisation in Virginia, providing round-the-clock support for people with developmental and intellectual disabilities. It ran for more than sixteen years. Care was the business, and the discipline of it is still visible in how she works.",
+    "Then she came home. She has spoken plainly about what that turn meant to her — not a retirement but a beginning, and the point at which she started giving in earnest.",
+    "Her giving is specific rather than symbolic. University scholarships for law students. A borehole for a women's farming community in Farato. She has said she intends to give at least one million dalasis a year, and that a foundation is being put in place to carry it.",
   ],
 };
 
-export const foundation = {
-  intro:
-    "The Foundation works in three areas. None of them are separate from the others — a woman without capital cannot stay healthy, and a woman without health cannot build anything that lasts.",
-  pillars: [
-    {
-      title: "Women & Wealth",
-      body: "Capital, training, and the introductions that turn a good idea into a functioning business. We back women who are already working and simply need the room to grow.",
-      image: "/media/img/foundation-01.jpg",
-    },
-    {
-      title: "Education & Opportunity",
-      body: "Scholarships and mentorship for young women who have the ability and not yet the access. We follow them past the first cheque.",
-      image: "/media/img/foundation-02.jpg",
-    },
-    {
-      title: "Health & Dignity",
-      body: "Maternal health, clinics, and the unglamorous infrastructure that keeps a community standing. This is where everything else is built on.",
-      image: "/media/img/foundation-03.jpg",
-    },
-  ],
-};
-
-export const nenneh100 = {
-  numeral: "100",
-  line: "One hundred women a year. Not cheques — training, introductions, and someone who answers the phone.",
-};
-
-export const table = {
-  lines: [
-    "Eight people, one table, one subject.",
-    "What is said here stays here.",
-    "By invitation.",
-  ],
-};
-
-export const conversation = {
-  intro:
-    "A quarterly public series. One guest, one hour, questions from the room afterward.",
-  subjects: [
-    "On building something that outlasts you",
-    "On money, and who gets to talk about it",
-    "On leaving and on coming home",
-    "On power without a title",
-    "On the work no one photographs",
-  ],
-};
-
-export const writing = [
-  { title: "What thirty years bought me", slug: "what-thirty-years-bought-me" },
-  { title: "On being the woman who convenes", slug: "on-being-the-woman-who-convenes" },
-  { title: "My father's idea of a serious room", slug: "my-fathers-idea-of-a-serious-room" },
-  { title: "Why I came home at fifty", slug: "why-i-came-home-at-fifty" },
-  { title: "The cost of answering the phone", slug: "the-cost-of-answering-the-phone" },
+export const quotes = [
+  { text: "I want to make a difference.", source: "The Standard, 11 July 2025" },
+  {
+    text: "But when it is your money, you are in control of your life.",
+    source: "The Standard, 18 July 2025",
+  },
+  {
+    text: "It's the only concrete thing no one can ever take from you.",
+    source: "The Point, 3 September 2025",
+  },
+  {
+    text: "One person alone can't fix Gambia, but if we work together, we can transform lives.",
+    source: "The Point, 2 September 2025",
+  },
 ];
 
-export const culture = [
-  { image: "/media/img/culture-01.jpg", caption: "Dakar, 2019", aspect: "3 / 4" },
-  { image: "/media/img/culture-02.jpg", caption: "A concert, no apology", aspect: "4 / 5" },
-  { image: "/media/img/culture-03.jpg", caption: "Fabric, Banjul market", aspect: "1 / 1" },
-  { image: "/media/img/culture-04.jpg", caption: "Lagos Fashion Week", aspect: "4 / 5" },
-  { image: "/media/img/culture-05.jpg", caption: "Home, Kombo", aspect: "3 / 4" },
-  { image: "/media/img/culture-06.jpg", caption: "With friends, unposed", aspect: "1 / 1" },
-  { image: "/media/img/culture-07.jpg", caption: "A gift from a client, kept", aspect: "4 / 5" },
-  { image: "/media/img/culture-08.jpg", caption: "Travel, somewhere warm", aspect: "3 / 4" },
-  { image: "/media/img/culture-09.jpg", caption: "Textile detail", aspect: "1 / 1" },
-  { image: "/media/img/culture-10.jpg", caption: "New York, before the return", aspect: "4 / 5" },
-];
+export const work = {
+  intro:
+    "Two projects are documented in the Gambian press. Both are recent, both are specific, and both are the kind of work that does not photograph well but changes what a day is like.",
+  projects: [
+    {
+      title: "Scholarships at the University of The Gambia",
+      amount: "D250,000",
+      body: "A presentation to the University of The Gambia Students' Union supporting a scholarship programme earmarked for more than twenty law students, alongside mentoring and a stated intention to keep supporting education.",
+      image: "/media/img/work-utg-scholarship.jpg",
+      alt: "Nenneh Cheyassin Secka-Kebe presenting a scholarship contribution to University of The Gambia Students' Union representatives and students",
+      source: {
+        label: "The Point, 3 September 2025",
+        href: "https://thepoint.gm/africa/gambia/national-news/nenneh-cheyassin-presents-d250000-to-utg-law-students",
+      },
+    },
+    {
+      title: "A borehole at Farato",
+      amount: "D300,000",
+      body: "A borehole for a women's farming community at Farato, providing irrigation for the gardens and filtered drinking water. The gardeners who use it are quoted in the reporting; expanding it further is an ambition rather than a finished programme.",
+      image: "/media/img/work-farato-borehole.png",
+      alt: "Women of the Farato farming community gathered beside the newly installed borehole tower",
+      source: {
+        label: "The Point, 2 September 2025",
+        href: "https://thepoint.gm/africa/gambia/national-news/transforming-lives-neneh-kebbehs-borehole-project-changing-lives-in-farato",
+      },
+    },
+  ],
+};
+
+export const giving = {
+  figure: "D1m",
+  line: "She has said she intends to give at least one million dalasis a year, and that a foundation is being established with her lawyer to carry that giving.",
+  note: "A stated goal, described in interview — not an audited annual result.",
+  source: {
+    label: "The Standard, 18 July 2025",
+    href: "https://standard.gm/nenneh-cheyassin-secka-kebe-the-philanthropist-woman-who-spent-a-million-dalasis-at-the-wally-seck-concert-part-2/",
+  },
+};
 
 export const press = [
-  { name: "The Standard", image: "/media/img/press-01.jpg" },
-  { name: "Foroyaa", image: "/media/img/press-02.jpg" },
-  { name: "Voice Gambia", image: "/media/img/press-03.jpg" },
-  { name: "West Africa Weekly", image: "/media/img/press-04.jpg" },
-  { name: "Business Day", image: "/media/img/press-05.jpg" },
-  { name: "Continental Review", image: "/media/img/press-06.jpg" },
+  {
+    title: "The philanthropist woman who spent a million dalasis at the Wally Seck concert",
+    outlet: "The Standard",
+    date: "11 July 2025",
+    href: "https://standard.gm/nenneh-cheyassin-secka-kebe-the-philanthropist-woman-who-spent-a-million-dalasis-at-the-wally-seck-concert/",
+  },
+  {
+    title: "On money, education and women's independence",
+    outlet: "The Standard",
+    date: "18 July 2025",
+    href: "https://standard.gm/nenneh-cheyassin-secka-kebe-the-philanthropist-woman-who-spent-a-million-dalasis-at-the-wally-seck-concert-part-2/",
+  },
+  {
+    title: "Redefining womanhood, wealth and freedom in Gambia",
+    outlet: "The Point",
+    date: "8 August 2025",
+    href: "https://thepoint.gm/africa/gambia/national-news/nenneh-cheyassin-kebe-redefines-womanhood-wealth-and-freedom-in-gambia",
+  },
+  {
+    title: "Presents D250,000 to UTG law students",
+    outlet: "The Point",
+    date: "3 September 2025",
+    href: "https://thepoint.gm/africa/gambia/national-news/nenneh-cheyassin-presents-d250000-to-utg-law-students",
+  },
+  {
+    title: "Borehole project changing lives in Farato",
+    outlet: "The Point",
+    date: "2 September 2025",
+    href: "https://thepoint.gm/africa/gambia/national-news/transforming-lives-neneh-kebbehs-borehole-project-changing-lives-in-farato",
+  },
 ];
 
-export const invitations = [
-  {
-    label: "Speaking",
-    detail: "For conferences, universities, and closed-door rooms.",
-    email: "speaking@nennehcheyassin.com",
-  },
-  {
-    label: "Partnership",
-    detail: "For the Foundation, Nenneh 100, and The Table.",
-    email: "partnership@nennehcheyassin.com",
-  },
-  {
-    label: "Press",
-    detail: "For interviews, profiles, and fact-checking.",
-    email: "press@nennehcheyassin.com",
-  },
-];
+export const contact = {
+  intro:
+    "For speaking, partnership and press enquiries. Contact details are to be confirmed before this site goes live.",
+  instagram: "https://www.instagram.com/dormi_cheyassin/",
+  instagramHandle: "@dormi_cheyassin",
+};

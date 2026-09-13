@@ -41,7 +41,7 @@ export default async function OpengraphImage() {
           Secka-Kebe
         </div>
         <div style={{ fontSize: 26, color: "#A8813F", marginTop: 24 }}>
-          She does not wait to be invited into the room.
+          Nurse. Businesswoman. Philanthropist. Gambian.
         </div>
       </div>
     ),

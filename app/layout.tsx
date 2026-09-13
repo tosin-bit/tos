@@ -28,11 +28,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: FULL_NAME,
   description:
-    "Nenneh Cheyassin Secka-Kebe — nurse, businesswoman, philanthropist, and convener. Founder of the Foundation and Nenneh 100.",
+    "Nenneh Cheyassin Secka-Kebe — Gambian nurse, businesswoman and philanthropist. Scholarships at the University of The Gambia and a borehole for the women farmers of Farato.",
   openGraph: {
     title: FULL_NAME,
     description:
-      "Nenneh Cheyassin Secka-Kebe — nurse, businesswoman, philanthropist, and convener.",
+      "Nenneh Cheyassin Secka-Kebe — Gambian nurse, businesswoman and philanthropist.",
     url: SITE_URL,
     siteName: FULL_NAME,
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: FULL_NAME,
     description:
-      "Nenneh Cheyassin Secka-Kebe — nurse, businesswoman, philanthropist, and convener.",
+      "Nenneh Cheyassin Secka-Kebe — Gambian nurse, businesswoman and philanthropist.",
     images: ["/opengraph-image"],
   },
 };
@@ -53,10 +53,11 @@ const personSchema = {
   "@type": "Person",
   name: FULL_NAME,
   url: SITE_URL,
-  jobTitle: "Founder and Convener",
+  jobTitle: "Philanthropist and healthcare entrepreneur",
   nationality: "Gambian",
   alumniOf: "Nursing and graduate business studies",
-  knowsAbout: ["Philanthropy", "Business", "Healthcare", "Civic convening"],
+  knowsAbout: ["Philanthropy", "Residential care", "Education", "Women's financial independence"],
+  sameAs: ["https://www.instagram.com/dormi_cheyassin/"],
 };
 
 export default function RootLayout({
