@@ -4,21 +4,82 @@ import type React from "react";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import MediaFallback from "@/components/media/MediaFallback";
+import TextilePattern from "@/components/graphics/TextilePattern";
+import useMediaMissing from "@/components/media/useMediaMissing";
 import { prefersReducedMotion } from "@/lib/motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const SRC = "/media/video/hero-portrait.mp4";
 
+function HeroArt() {
+  return (
+    <div className="absolute inset-0 overflow-hidden bg-indigo" aria-hidden="true">
+      <TextilePattern motif="starburst" scale={2.2} />
+      <svg
+        className="absolute inset-0 h-full w-full"
+        viewBox="0 0 1000 620"
+        preserveAspectRatio="xMidYMid slice"
+      >
+        <defs>
+          <radialGradient id="hero-glow" cx="50%" cy="45%" r="55%">
+            <stop offset="0%" stopColor="#5E1F32" stopOpacity="0.95" />
+            <stop offset="100%" stopColor="#5E1F32" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+        <circle cx="735" cy="300" r="340" fill="url(#hero-glow)" />
+        <defs>
+          <clipPath id="hero-crescent">
+            <circle cx="742" cy="286" r="188" />
+          </clipPath>
+        </defs>
+        {/* eclipse: an ecru disc cut by an offset indigo disc */}
+        <g>
+          <circle cx="742" cy="286" r="188" fill="#EFE7D6" opacity="0.93" />
+          <g clipPath="url(#hero-crescent)">
+            <circle cx="640" cy="232" r="188" fill="#1C1B3A" />
+            <circle cx="640" cy="232" r="188" fill="none" stroke="#A8813F" strokeWidth="2.5" opacity="0.85" />
+          </g>
+          <circle cx="742" cy="286" r="188" fill="none" stroke="#A8813F" strokeWidth="3" />
+        </g>
+        <g fill="none" stroke="#A8813F">
+          <circle cx="742" cy="286" r="236" strokeWidth="1.5" opacity="0.55" />
+          <circle cx="742" cy="286" r="286" strokeWidth="1" opacity="0.3" />
+          <path d="M742 62 A224 224 0 0 1 966 286" strokeWidth="4" opacity="0.9" />
+        </g>
+        <g stroke="#A8813F" strokeWidth="1.5" opacity="0.4">
+          <line x1="0" y1="498" x2="1000" y2="498" />
+          <line x1="500" y1="0" x2="500" y2="620" strokeWidth="1" opacity="0.5" />
+        </g>
+      </svg>
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(100deg, rgba(28,27,58,0.97) 0%, rgba(28,27,58,0.90) 34%, rgba(28,27,58,0.34) 62%, rgba(28,27,58,0.05) 100%)",
+        }}
+      />
+      <div
+        className="absolute inset-x-0 bottom-0 h-1/3"
+        style={{
+          background: "linear-gradient(to top, rgba(28,27,58,0.92) 0%, rgba(28,27,58,0) 100%)",
+        }}
+      />
+      <span className="absolute right-6 top-24 font-body text-xs text-brass/40">
+        hero-portrait.mp4
+      </span>
+    </div>
+  );
+}
+
 export default function ScrollScrubHero({ children }: { children?: React.ReactNode }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const outerRef = useRef<HTMLDivElement>(null);
   const stickyRef = useRef<HTMLDivElement>(null);
-  const [hasError, setHasError] = useState(false);
   const [playing, setPlaying] = useState(true);
   const [showControl, setShowControl] = useState(false);
   const [scrub, setScrub] = useState(true);
+  const hasError = useMediaMissing(videoRef);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -97,7 +158,6 @@ export default function ScrollScrubHero({ children }: { children?: React.ReactNo
               playsInline
               preload="auto"
               className="h-full w-full object-cover"
-              onError={() => setHasError(true)}
             >
               <source src={SRC} type="video/mp4" />
             </video>
@@ -112,9 +172,9 @@ export default function ScrollScrubHero({ children }: { children?: React.ReactNo
             ) : null}
           </>
         ) : (
-          <MediaFallback src={SRC} kind="video" />
+          <HeroArt />
         )}
-        <div className="absolute inset-0 bg-indigo/25" aria-hidden="true" />
+        {!hasError ? <div className="absolute inset-0 bg-indigo/25" aria-hidden="true" /> : null}
         {children}
       </div>
     </div>

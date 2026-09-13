@@ -9,6 +9,8 @@ import { culture } from "@/lib/content";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const CULTURE_ART = ["detail", "portrait", "scene"] as const;
+
 export default function CultureGallery() {
   const pinRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -59,9 +61,9 @@ export default function CultureGallery() {
   if (useCarousel) {
     return (
       <div className="no-scrollbar flex snap-x snap-mandatory gap-6 overflow-x-auto px-gutter pb-4">
-        {culture.map((item) => (
+        {culture.map((item, i) => (
           <div key={item.image} className="w-[80vw] flex-shrink-0 snap-start sm:w-[50vw]">
-            <MediaImage src={item.image} alt={item.caption} aspect={item.aspect} />
+            <MediaImage src={item.image} alt={item.caption} aspect={item.aspect} art={CULTURE_ART[i % 3]} />
             <p className="mt-3 font-body text-xs text-brass">{item.caption}</p>
           </div>
         ))}
@@ -72,9 +74,9 @@ export default function CultureGallery() {
   return (
     <div ref={pinRef} className="relative h-screen w-full overflow-hidden">
       <div ref={trackRef} className="flex h-full items-center gap-10 pl-gutter">
-        {culture.map((item) => (
+        {culture.map((item, i) => (
           <div key={item.image} className="w-[28vw] flex-shrink-0">
-            <MediaImage src={item.image} alt={item.caption} aspect={item.aspect} />
+            <MediaImage src={item.image} alt={item.caption} aspect={item.aspect} art={CULTURE_ART[i % 3]} />
             <p className="mt-3 font-body text-xs text-brass">{item.caption}</p>
           </div>
         ))}

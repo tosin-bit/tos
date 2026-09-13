@@ -1,17 +1,5 @@
-function filenameOf(src: string) {
-  return src.split("/").pop() ?? src;
-}
+import PlaceholderArt, { type ArtKind } from "@/components/graphics/PlaceholderArt";
 
-export default function MediaFallback({ src, kind }: { src: string; kind: "image" | "video" }) {
-  return (
-    <div
-      className="absolute inset-0 flex items-end bg-indigo p-4"
-      aria-hidden="true"
-    >
-      <span className="font-body text-xs text-brass">
-        {kind === "video" ? "video " : "image "}
-        {filenameOf(src)}
-      </span>
-    </div>
-  );
+export default function MediaFallback({ src, art = "scene" }: { src: string; art?: ArtKind }) {
+  return <PlaceholderArt src={src} kind={art} />;
 }

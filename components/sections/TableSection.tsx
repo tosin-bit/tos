@@ -23,6 +23,7 @@ export default function TableSection() {
             alt="Dim, low-motion footage of a set table"
             aspect="4 / 5"
             cursorWord="watch"
+            art="detail"
             className="opacity-90"
           />
         </div>

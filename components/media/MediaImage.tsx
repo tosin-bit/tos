@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import MediaFallback from "./MediaFallback";
+import type { ArtKind } from "@/components/graphics/PlaceholderArt";
 
 type Props = {
   src: string;
@@ -9,9 +10,17 @@ type Props = {
   aspect?: string;
   className?: string;
   cursorWord?: string;
+  art?: ArtKind;
 };
 
-export default function MediaImage({ src, alt, aspect = "4 / 5", className = "", cursorWord }: Props) {
+export default function MediaImage({
+  src,
+  alt,
+  aspect = "4 / 5",
+  className = "",
+  cursorWord,
+  art = "scene",
+}: Props) {
   const [hasError, setHasError] = useState(false);
 
   return (
@@ -29,7 +38,7 @@ export default function MediaImage({ src, alt, aspect = "4 / 5", className = "",
           onError={() => setHasError(true)}
         />
       ) : (
-        <MediaFallback src={src} kind="image" />
+        <MediaFallback src={src} art={art} />
       )}
     </div>
   );

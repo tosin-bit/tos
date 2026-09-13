@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import MediaFallback from "./MediaFallback";
+import useMediaMissing from "./useMediaMissing";
+import type { ArtKind } from "@/components/graphics/PlaceholderArt";
 import { prefersReducedMotion } from "@/lib/motion";
 
 type Props = {
@@ -12,6 +14,7 @@ type Props = {
   className?: string;
   cursorWord?: string;
   poster?: string;
+  art?: ArtKind;
 };
 
 export default function MediaVideo({
@@ -22,11 +25,12 @@ export default function MediaVideo({
   className = "",
   cursorWord = "watch",
   poster,
+  art = "scene",
 }: Props) {
-  const [hasError, setHasError] = useState(false);
   const [reduced, setReduced] = useState(false);
   const [playing, setPlaying] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const hasError = useMediaMissing(videoRef);
 
   useEffect(() => {
     const isReduced = prefersReducedMotion();
@@ -64,7 +68,6 @@ export default function MediaVideo({
             autoPlay={!reduced}
             poster={poster}
             className="h-full w-full object-cover"
-            onError={() => setHasError(true)}
           >
             {webmSrc ? <source src={webmSrc} type="video/webm" /> : null}
             <source src={src} type="video/mp4" />
@@ -80,7 +83,7 @@ export default function MediaVideo({
           ) : null}
         </>
       ) : (
-        <MediaFallback src={src} kind="video" />
+        <MediaFallback src={src} art={art} />
       )}
     </div>
   );

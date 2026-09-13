@@ -34,7 +34,7 @@ export default function Nenneh100Section() {
       <div className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
         {PORTRAITS.map((portrait, i) => (
           <ClipReveal key={portrait.src} direction={i % 2 === 0 ? "left" : "right"}>
-            <MediaImage src={portrait.src} alt={portrait.alt} aspect="1 / 1" />
+            <MediaImage src={portrait.src} alt={portrait.alt} aspect="1 / 1" art="portrait" />
           </ClipReveal>
         ))}
       </div>

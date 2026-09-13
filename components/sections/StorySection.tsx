@@ -42,6 +42,7 @@ export default function StorySection() {
             src="/media/img/portrait-seated.jpg"
             alt="Nenneh Cheyassin Secka-Kebe, seated portrait"
             aspect="4 / 5"
+            art="portrait"
           />
         </div>
         <div className="flex flex-col gap-8 lg:col-span-6 lg:col-start-7 lg:py-24">
