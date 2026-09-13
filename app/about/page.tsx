@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Section, { SectionLabel } from "@/components/Section";
+import Heading from "@/components/Heading";
 import ClipReveal from "@/components/ClipReveal";
 import MediaBand from "@/components/MediaBand";
 import MediaImage from "@/components/media/MediaImage";
@@ -25,9 +26,9 @@ export default function AboutPage() {
     <main className="bg-chalk pt-28 text-indigo">
       <Section as="div" id="biography" className="pb-12">
         <SectionLabel className="text-brass-deep">Biography</SectionLabel>
-        <h1 className="max-w-[16ch] font-display text-4xl leading-[1.05] text-indigo">
+        <Heading as="h1" size="xl" className="max-w-[14ch] text-indigo">
           {biography.title}
-        </h1>
+        </Heading>
       </Section>
 
       <MediaBand
@@ -48,7 +49,9 @@ export default function AboutPage() {
         {biography.sections.map((section) => (
           <div key={section.heading ?? "opening"} className="flex flex-col gap-6">
             {section.heading ? (
-              <h2 className="mt-8 font-display text-3xl text-indigo">{section.heading}</h2>
+              <Heading size="lg" className="mt-8 text-indigo">
+                {section.heading}
+              </Heading>
             ) : null}
             {section.paragraphs.map((paragraph) => (
               <p
@@ -59,7 +62,7 @@ export default function AboutPage() {
               </p>
             ))}
             {section.quote ? (
-              <blockquote className="max-w-measure border-l-2 border-brass pl-6 font-display text-2xl leading-snug text-indigo">
+              <blockquote className="max-w-measure border-l-2 border-brass pl-6 font-display text-[clamp(1.25rem,2.2vw,1.75rem)] leading-snug text-indigo">
                 &ldquo;{section.quote}&rdquo;
               </blockquote>
             ) : null}
@@ -72,7 +75,7 @@ export default function AboutPage() {
               </p>
             ))}
             {section.closingQuote ? (
-              <blockquote className="max-w-measure border-l-2 border-brass pl-6 font-display text-2xl leading-snug text-indigo">
+              <blockquote className="max-w-measure border-l-2 border-brass pl-6 font-display text-[clamp(1.25rem,2.2vw,1.75rem)] leading-snug text-indigo">
                 &ldquo;{section.closingQuote}&rdquo;
               </blockquote>
             ) : null}
@@ -126,7 +129,9 @@ export default function AboutPage() {
                   art="scene" tone="light"
                 />
               </ClipReveal>
-              <h2 className="mt-6 font-display text-2xl text-indigo">{block.title}</h2>
+              <Heading size="md" className="mt-6 text-indigo">
+                {block.title}
+              </Heading>
               <p className="mt-4 max-w-measure font-body text-lg leading-relaxed text-indigo/80">
                 {block.body}
               </p>
@@ -144,7 +149,7 @@ export default function AboutPage() {
                 key={paragraph}
                 className={
                   i === 0
-                    ? "max-w-measure font-display text-3xl leading-snug text-ecru"
+                    ? "max-w-measure font-display text-[clamp(1.35rem,2.5vw,2rem)] leading-snug text-ecru"
                     : "max-w-measure font-body text-lg leading-relaxed text-ecru/85"
                 }
               >

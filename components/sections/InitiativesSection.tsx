@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Section, { SectionLabel } from "@/components/Section";
+import Heading from "@/components/Heading";
 import { initiatives } from "@/lib/content";
 
 export default function InitiativesSection() {
@@ -9,7 +10,9 @@ export default function InitiativesSection() {
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
         {initiatives.map((item) => (
           <div key={item.name} className="border-t border-brass/50 pt-8">
-            <h3 className="font-display text-3xl text-indigo">{item.name}</h3>
+            <Heading as="h3" size="lg" className="text-indigo">
+              {item.name}
+            </Heading>
             <p className="mt-5 max-w-measure font-body text-lg leading-relaxed text-indigo/80">
               {item.body}
             </p>

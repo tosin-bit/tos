@@ -352,16 +352,30 @@ export const pressArchive = [
   },
 ];
 
-export const broadcast =
-  "Eye Africa TV (Sunu Réew, October 2025), Coffee Time with Peter Gomez, West Coast Radio, Kerr Fatou, Eco TV.";
+export const broadcast = [
+  { name: "Eye Africa TV", detail: "Sunu Réew, October 2025" },
+  { name: "Coffee Time with Peter Gomez", detail: "" },
+  { name: "West Coast Radio", detail: "" },
+  { name: "Kerr Fatou", detail: "" },
+  { name: "Eco TV", detail: "" },
+];
 
+// Only the first is being written. The rest are commissioned to herself and
+// listed so the shape of the series is visible; none are published yet.
 export const writing = [
-  "Why I came home at fifty",
-  "A woman's money is her freedom",
-  "What America taught me, and what The Gambia gave me",
-  "I ran a care home for sixteen years. Here is what it taught me about leadership.",
-  "Philanthropy is not handing out money",
-  "My father went to prison when I was eight. He came out and kept working.",
+  { title: "Why I came home at fifty", status: "In preparation" },
+  { title: "A woman's money is her freedom", status: "Planned" },
+  { title: "What America taught me, and what The Gambia gave me", status: "Planned" },
+  {
+    title:
+      "I ran a care home for sixteen years. Here is what it taught me about leadership.",
+    status: "Planned",
+  },
+  { title: "Philanthropy is not handing out money", status: "Planned" },
+  {
+    title: "My father went to prison when I was eight. He came out and kept working.",
+    status: "Planned",
+  },
 ];
 
 /* ── Contact ─────────────────────────────────────────────────── */

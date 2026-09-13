@@ -23,5 +23,7 @@ export function SectionLabel({
   children: React.ReactNode;
   className?: string;
 }) {
-  return <p className={`mb-6 font-body text-sm ${className}`}>{children}</p>;
+  return (
+    <p className={`mb-6 font-body text-xs uppercase tracking-caps ${className}`}>{children}</p>
+  );
 }

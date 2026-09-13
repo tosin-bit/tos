@@ -91,8 +91,9 @@ social content all cut from it.
 
 - **Remaining film slots** render as generated textile placeholders until clips land at the
   paths in `public/media/video/`. Drop the files in and they swap automatically.
-- **Writing.** Six essay titles are listed on `/journal`; none are written yet. The site notes
-  the first is in preparation.
+- **Writing.** Six essay titles are listed on `/journal`; none are written yet. Each carries a
+  status marker — the first reads "In preparation", the rest "Planned" — and the section states
+  plainly that nothing there is published. Change a marker the moment a draft actually exists.
 - **Foundation imagery** now uses real Farato photographs for Women & Wealth and Health & Dignity.
 - **Nenneh 100 portraits.** The eight-portrait wall was removed: the first cohort has not been
   selected, so there are no beneficiaries to photograph. Captioning the Farato gardeners as Nenneh

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Section, { SectionLabel } from "@/components/Section";
+import Heading from "@/components/Heading";
 import ClipReveal from "@/components/ClipReveal";
 import Parallax from "@/components/Parallax";
 import MediaBand from "@/components/MediaBand";
@@ -45,9 +46,9 @@ export default function FoundationPage() {
     <main className="bg-chalk pt-28 text-indigo">
       <Section as="div" className="pb-12">
         <SectionLabel className="text-brass-deep">The Foundation</SectionLabel>
-        <h1 className="max-w-[14ch] font-display text-4xl leading-[1.05] text-indigo">
+        <Heading as="h1" size="xl" className="max-w-[14ch] text-indigo">
           {foundation.name}
-        </h1>
+        </Heading>
         <p className="mt-8 max-w-measure font-display text-xl leading-snug text-brass-deep">
           {foundation.dedication}
         </p>
@@ -123,7 +124,9 @@ export default function FoundationPage() {
                   />
                 </ClipReveal>
                 <Parallax speed={0.08} className="mt-6">
-                  <h2 className="font-display text-2xl text-indigo">{pillar.title}</h2>
+                  <Heading size="md" className="text-indigo">
+                    {pillar.title}
+                  </Heading>
                   <p className="mt-4 max-w-measure font-body text-base leading-relaxed text-indigo/80">
                     {pillar.body}
                   </p>
@@ -138,7 +141,7 @@ export default function FoundationPage() {
         <SectionLabel>{foundation.nenneh100.name}</SectionLabel>
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <span className="font-display text-[clamp(6rem,18vw,14rem)] leading-none text-ecru">
+            <span className="font-display text-[clamp(5rem,13vw,9.5rem)] leading-none text-ecru">
               100
             </span>
           </div>
@@ -148,7 +151,7 @@ export default function FoundationPage() {
                 key={line}
                 className={
                   i === 0
-                    ? "max-w-measure font-display text-2xl leading-snug text-ecru"
+                    ? "max-w-measure font-display text-[clamp(1.25rem,2.2vw,1.75rem)] leading-snug text-ecru"
                     : "max-w-measure font-body text-lg leading-relaxed text-ecru/85"
                 }
               >

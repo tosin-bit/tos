@@ -74,7 +74,7 @@ export default function VideoFeature({
           }
         >
           <h2
-            className={`max-w-[18ch] font-display text-3xl leading-snug ${
+            className={`max-w-[18ch] font-display text-3xl uppercase tracking-[0.045em] ${
               light ? "text-indigo" : "text-ecru"
             }`}
           >

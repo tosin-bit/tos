@@ -29,12 +29,14 @@ const config: Config = {
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1.5" }],
       sm: ["0.875rem", { lineHeight: "1.6" }],
-      base: ["1.125rem", { lineHeight: "1.6" }],
-      lg: ["1.25rem", { lineHeight: "1.6" }],
-      xl: ["1.5rem", { lineHeight: "1.4" }],
-      "2xl": ["2rem", { lineHeight: "1.2" }],
-      "3xl": ["clamp(2.5rem, 6vw, 4.5rem)", { lineHeight: "1.05" }],
-      "4xl": ["clamp(3rem, 9vw, 7rem)", { lineHeight: "0.98" }],
+      base: ["1.0625rem", { lineHeight: "1.65" }],
+      lg: ["1.1875rem", { lineHeight: "1.65" }],
+      xl: ["1.375rem", { lineHeight: "1.45" }],
+      // Heading steps. Capitals occupy more optical width than lowercase, so
+      // every step below sits lower than a lowercase scale would.
+      "2xl": ["clamp(1.25rem, 1.8vw, 1.5rem)", { lineHeight: "1.25" }],
+      "3xl": ["clamp(1.625rem, 2.8vw, 2.25rem)", { lineHeight: "1.15" }],
+      "4xl": ["clamp(2.125rem, 4.6vw, 3.5rem)", { lineHeight: "1.05" }],
       hero: ["clamp(4.5rem, 15vw, 13rem)", { lineHeight: "0.9" }],
     },
     extend: {
@@ -44,6 +46,11 @@ const config: Config = {
       },
       maxWidth: {
         measure: "62ch",
+      },
+      letterSpacing: {
+        // Block-letter headings: the larger the size, the tighter the track.
+        caps: "0.08em",
+        "caps-tight": "0.02em",
       },
       transitionTimingFunction: {
         signature: "cubic-bezier(0.16, 1, 0.3, 1)",
