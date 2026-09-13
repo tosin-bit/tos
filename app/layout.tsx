@@ -28,11 +28,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: FULL_NAME,
   description:
-    "Nenneh Cheyassin Secka-Kebe — Gambian nurse, businesswoman and philanthropist. Scholarships at the University of The Gambia and a borehole for the women farmers of Farato.",
+    "Gambian philanthropist, healthcare entrepreneur and convener. Founder of the Cheyassin Foundation.",
   openGraph: {
     title: FULL_NAME,
     description:
-      "Nenneh Cheyassin Secka-Kebe — Gambian nurse, businesswoman and philanthropist.",
+      "Gambian philanthropist, healthcare entrepreneur and convener. Founder of the Cheyassin Foundation.",
     url: SITE_URL,
     siteName: FULL_NAME,
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: FULL_NAME,
     description:
-      "Nenneh Cheyassin Secka-Kebe — Gambian nurse, businesswoman and philanthropist.",
+      "Gambian philanthropist, healthcare entrepreneur and convener. Founder of the Cheyassin Foundation.",
     images: ["/opengraph-image"],
   },
 };
@@ -53,7 +53,9 @@ const personSchema = {
   "@type": "Person",
   name: FULL_NAME,
   url: SITE_URL,
-  jobTitle: "Philanthropist and healthcare entrepreneur",
+  alternateName: "Nenneh Cheyassin Kebe",
+  jobTitle: "Philanthropist, healthcare entrepreneur and convener",
+  parent: { "@type": "Person", name: "Pap Ousman Cheyassin Secka" },
   nationality: "Gambian",
   alumniOf: "Nursing and graduate business studies",
   knowsAbout: ["Philanthropy", "Residential care", "Education", "Women's financial independence"],

@@ -3,10 +3,10 @@
 import Link from "next/link";
 
 const LINKS = [
-  { href: "/#story", label: "Story" },
-  { href: "/#work", label: "Work" },
-  { href: "/#press", label: "Press" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/foundation", label: "The Foundation" },
+  { href: "/journal", label: "Journal" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Nav() {

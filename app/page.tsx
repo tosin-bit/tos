@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import OpeningSection from "@/components/sections/OpeningSection";
-import StatementSection from "@/components/sections/StatementSection";
-import StorySection from "@/components/sections/StorySection";
-import WorkSection from "@/components/sections/WorkSection";
-import GivingSection from "@/components/sections/GivingSection";
-import QuotesSection from "@/components/sections/QuotesSection";
+import HeroSection from "@/components/sections/HeroSection";
+import IntroSection from "@/components/sections/IntroSection";
+import FeaturedFoundationSection from "@/components/sections/FeaturedFoundationSection";
 import PressSection from "@/components/sections/PressSection";
-import ContactSection from "@/components/sections/ContactSection";
+import VideoGallerySection from "@/components/sections/VideoGallerySection";
+import InitiativesSection from "@/components/sections/InitiativesSection";
+import QuoteWallSection from "@/components/sections/QuoteWallSection";
+import JournalSection from "@/components/sections/JournalSection";
+import ClosingSection from "@/components/sections/ClosingSection";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -15,14 +16,15 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <main>
-      <OpeningSection />
-      <StatementSection />
-      <StorySection />
-      <WorkSection />
-      <GivingSection />
-      <QuotesSection />
+      <HeroSection />
+      <IntroSection />
+      <FeaturedFoundationSection />
       <PressSection />
-      <ContactSection />
+      <VideoGallerySection />
+      <InitiativesSection />
+      <QuoteWallSection />
+      <JournalSection />
+      <ClosingSection />
     </main>
   );
 }

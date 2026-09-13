@@ -1,5 +1,9 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [{ url: "https://nennehcheyassin.com", lastModified: new Date() }];
+  const base = "https://nennehcheyassin.com";
+  return ["", "/about", "/foundation", "/journal", "/contact"].map((path) => ({
+    url: `${base}${path}`,
+    lastModified: new Date(),
+  }));
 }
