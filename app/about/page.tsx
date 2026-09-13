@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 
 const WORK_IMAGES = [
   "/media/img/work-utg-scholarship.jpg",
-  "/media/img/about-healthcare.jpg",
-  "/media/img/about-women-money.jpg",
-  "/media/img/about-convening.jpg",
+  "/media/img/farato-taps.jpg",
+  "/media/img/farato-jerrycan.jpg",
+  "/media/img/farato-crowd-wide.jpg",
 ];
 
 export default function AboutPage() {
@@ -31,17 +31,17 @@ export default function AboutPage() {
       </Section>
 
       <MediaBand
-        src="/media/img/portrait-hero.jpg"
-        alt="Nenneh Cheyassin Secka-Kebe in a gold headwrap and turquoise embroidered dress"
+        src="/media/img/portrait-teal.jpg"
+        alt="Nenneh Cheyassin Secka-Kebe in a turquoise lace gown and headwrap"
         height="h-[62svh]"
-        objectPosition="50% 30%"
+        objectPosition="50% 18%"
         art="portrait" tone="light"
       />
 
       <PinnedPortrait
-        src="/media/img/portrait-seated.jpg"
-        alt="Nenneh Cheyassin Secka-Kebe in a blue and white embroidered outfit with gold jewellery"
-        aspect="1066 / 1132"
+        src="/media/img/portrait-biography.jpg"
+        alt="Nenneh Cheyassin Secka-Kebe in a turquoise lace gown"
+        aspect="1066 / 1600"
         className="bg-chalk"
         tone="light"
       >
@@ -105,11 +105,12 @@ export default function AboutPage() {
       </Section>
 
       <MediaBand
-        src="/media/video/statement-broll.mp4"
-        kind="video"
-        alt="Ambient footage of Nenneh Cheyassin Secka-Kebe"
-        height="h-[75svh]"
-        art="scene" tone="light"
+        src="/media/img/farato-nenneh-celebrating.jpg"
+        alt="Nenneh Cheyassin Secka-Kebe celebrating with the women of Farato"
+        height="h-[70svh]"
+        objectPosition="50% 35%"
+        art="scene"
+        tone="light"
       />
 
       <Section as="div" id="the-work" className="bg-sand text-indigo">
@@ -154,9 +155,9 @@ export default function AboutPage() {
           <div className="lg:col-span-4 lg:col-start-9">
             <ClipReveal direction="right">
               <MediaImage
-                src="/media/img/portrait-candid.jpg"
-                alt="Nenneh Cheyassin Secka-Kebe in a white headwrap and embroidered white dress"
-                aspect="934 / 740"
+                src="/media/img/portrait-rose.jpg"
+                alt="Nenneh Cheyassin Secka-Kebe in a rose lace gown with gold jewellery"
+                aspect="798 / 1600"
                 art="portrait"
               />
             </ClipReveal>

@@ -40,8 +40,8 @@ export default function HeroSection() {
       <div ref={imageRef} className="absolute inset-0">
         <img
           src="/media/img/portrait-hero.jpg"
-          alt="Nenneh Cheyassin Secka-Kebe in a gold headwrap and turquoise embroidered dress"
-          className="h-full w-full object-cover object-[72%_center]"
+          alt="Nenneh Cheyassin Secka-Kebe in a black and gold embroidered grand boubou"
+          className="h-full w-full object-cover object-[50%_22%]"
         />
       </div>
 

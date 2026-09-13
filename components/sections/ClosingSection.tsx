@@ -5,9 +5,9 @@ export default function ClosingSection() {
   return (
     <section className="relative h-[80svh] w-full overflow-hidden bg-indigo">
       <img
-        src="/media/img/portrait-candid.jpg"
-        alt="Nenneh Cheyassin Secka-Kebe in a white headwrap and embroidered white dress"
-        className="h-full w-full object-cover object-[center_28%]"
+        src="/media/img/portrait-contact.jpg"
+        alt="Nenneh Cheyassin Secka-Kebe in white and gold lace with a gold necklace"
+        className="h-full w-full object-cover object-[center_18%]"
       />
       <div
         className="absolute inset-0"

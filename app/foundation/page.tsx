@@ -21,7 +21,24 @@ const LAYOUT = [
   { col: "lg:col-span-7", top: "lg:mt-16", aspect: "16 / 9", direction: "bottom" as const },
 ];
 
-const HUNDRED = Array.from({ length: 8 }, (_, i) => `/media/img/nenneh100-0${i + 1}.jpg`);
+const FARATO = [
+  {
+    src: "/media/img/farato-nenneh-celebrating.jpg",
+    alt: "Nenneh Cheyassin Secka-Kebe celebrating with the women of Farato",
+  },
+  {
+    src: "/media/img/farato-women-tap.jpg",
+    alt: "Women of Farato gathered at the new tap as the water runs",
+  },
+  {
+    src: "/media/img/farato-jerrycan.jpg",
+    alt: "A woman filling a jerrycan at the new Farato borehole",
+  },
+  {
+    src: "/media/img/farato-crowd-wide.jpg",
+    alt: "The crowd gathered at Farato for the borehole handover",
+  },
+];
 
 export default function FoundationPage() {
   return (
@@ -61,14 +78,33 @@ export default function FoundationPage() {
           <div className="lg:col-span-4 lg:col-start-9">
             <ClipReveal direction="right">
               <MediaImage
-                src="/media/img/work-farato-borehole.png"
-                alt="Women of the Farato farming community beside the borehole"
-                aspect="4 / 3"
+                src="/media/img/farato-tower.jpg"
+                alt="The completed borehole tower and tank at Farato"
+                aspect="1066 / 1600"
                 art="scene" tone="light"
               />
             </ClipReveal>
           </div>
         </div>
+      </Section>
+
+      <Section as="div" id="farato" className="bg-chalk pt-0">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+          {FARATO.map((item, i) => (
+            <ClipReveal key={item.src} direction={i % 2 === 0 ? "left" : "right"}>
+              <MediaImage
+                src={item.src}
+                alt={item.alt}
+                aspect="4 / 3"
+                art="scene"
+                tone="light"
+              />
+            </ClipReveal>
+          ))}
+        </div>
+        <p className="mt-6 font-body text-sm text-brass-deep">
+          Farato, September 2025 — the borehole handover
+        </p>
       </Section>
 
       <Section as="div" id="pillars" className="bg-sand">
@@ -136,18 +172,9 @@ export default function FoundationPage() {
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {HUNDRED.map((src, i) => (
-            <ClipReveal key={src} direction={i % 2 === 0 ? "left" : "right"}>
-              <MediaImage
-                src={src}
-                alt={`One of the hundred women, portrait ${i + 1}`}
-                aspect="1 / 1"
-                art="portrait"
-              />
-            </ClipReveal>
-          ))}
-        </div>
+        <p className="mt-16 max-w-measure font-body text-sm text-ecru/60">
+          The first cohort has not been selected. Portraits will follow.
+        </p>
       </Section>
 
       <MediaBand

@@ -20,9 +20,10 @@ export default function JournalPage() {
       </Section>
 
       <MediaBand
-        src="/media/img/press-band.jpg"
-        alt="Nenneh Cheyassin Secka-Kebe photographed for the press"
-        height="h-[52svh]"
+        src="/media/img/portrait-brown.jpg"
+        alt="Nenneh Cheyassin Secka-Kebe in brown and gold lace"
+        height="h-[58svh]"
+        objectPosition="50% 20%"
         art="press" tone="light"
       />
 

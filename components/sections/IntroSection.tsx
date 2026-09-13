@@ -11,15 +11,15 @@ export default function IntroSection() {
         <div className="lg:col-span-5">
           <ClipReveal direction="left">
             <MediaImage
-              src="/media/img/portrait-seated.jpg"
-              alt="Nenneh Cheyassin Secka-Kebe in a blue and white embroidered outfit with gold jewellery"
-              aspect="1066 / 1132"
+              src="/media/img/portrait-intro.jpg"
+              alt="Nenneh Cheyassin Secka-Kebe in a black and gold grand boubou"
+              aspect="1066 / 1600"
               art="portrait"
             />
           </ClipReveal>
         </div>
         <div className="flex flex-col justify-center lg:col-span-6 lg:col-start-7">
-          <p className="max-w-measure font-display text-3xl leading-snug text-ecru">{intro.lead}</p>
+          <p className="max-w-measure font-display text-[clamp(1.5rem,2.6vw,2.25rem)] leading-snug text-ecru">{intro.lead}</p>
           {intro.paragraphs.map((paragraph) => (
             <p
               key={paragraph}

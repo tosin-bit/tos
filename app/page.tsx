@@ -36,8 +36,8 @@ export default function HomePage() {
       <FeaturedFoundationSection />
 
       <MediaBand
-        src="/media/img/work-farato-borehole.png"
-        alt="Women of the Farato farming community beside the borehole"
+        src="/media/img/farato-women-tap.jpg"
+        alt="Women of the Farato farming community at the new tap"
         height="h-[62svh]"
         art="scene"
         caption="Farato — the borehole for the women's farming community"

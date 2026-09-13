@@ -59,40 +59,46 @@ export const outlets = [
 
 export const videoGallery = [
   {
-    src: "/media/video/hero-portrait.mp4",
-    caption: "Coming home",
-    sub: FULL_NAME,
-    aspect: "16 / 9",
+    src: "/media/video/farato-nenneh-crowd.mp4",
+    webmSrc: "/media/video/farato-nenneh-crowd.webm",
+    poster: "/media/img/poster-farato-crowd.jpg",
+    caption: "The handover",
+    sub: "Farato, September 2025",
+    aspect: "464 / 314",
   },
   {
-    src: "/media/video/foundation-field.mp4",
-    caption: "The work",
-    sub: "Scholarships, students, and the schools she keeps returning to",
-    aspect: "16 / 9",
+    src: "/media/video/farato-celebration.mp4",
+    poster: "/media/img/poster-farato-celebration.jpg",
+    caption: "The tank is finished",
+    sub: "The women of the Farato farming community at the new tap",
+    aspect: "9 / 16",
+  },
+];
+
+export const faratoGallery = [
+  {
+    src: "/media/img/farato-nenneh-dance.jpg",
+    caption: "Dancing with the gardeners",
   },
   {
-    src: "/media/video/nenneh100-reel.mp4",
-    caption: "One hundred women",
-    sub: "Not cheques. Training, introductions, and someone who answers the phone.",
-    aspect: "1 / 1",
+    src: "/media/img/farato-taps.jpg",
+    caption: "Two taps, running",
   },
   {
-    src: "/media/video/table-ambient.mp4",
-    caption: "The Table",
-    sub: "Eight people. One subject. By invitation.",
-    aspect: "4 / 5",
+    src: "/media/img/farato-jerrycan.jpg",
+    caption: "Filling a jerrycan",
   },
   {
-    src: "/media/video/conversation-clip.mp4",
-    caption: "The Conversation",
-    sub: "A quarterly public gathering on money, women and work",
-    aspect: "16 / 9",
+    src: "/media/img/farato-women-tap.jpg",
+    caption: "First water",
   },
   {
-    src: "/media/video/series-ep-01.mp4",
-    caption: "At Nenneh's Table — I",
-    sub: "A doctor, a designer, and a woman who started again at forty",
-    aspect: "16 / 9",
+    src: "/media/img/farato-crowd-two.jpg",
+    caption: "The crowd",
+  },
+  {
+    src: "/media/img/farato-scene-six.jpg",
+    caption: "Farato",
   },
 ];
 
@@ -236,7 +242,7 @@ export const foundation = {
     {
       title: "Women & Wealth",
       body: "Financial literacy, business formalisation, microenterprise support, mentorship, access to market. The premise is simple: a woman with her own income has options, and a woman without one does not.",
-      image: "/media/img/foundation-01.jpg",
+      image: "/media/img/farato-nenneh-dance.jpg",
     },
     {
       title: "Education & Opportunity",
@@ -246,7 +252,7 @@ export const foundation = {
     {
       title: "Health & Dignity",
       body: "Health education, support for vulnerable families, selected facility partnerships, training and equipment. Built on sixteen years of actually delivering care.",
-      image: "/media/img/foundation-03.jpg",
+      image: "/media/img/farato-taps.jpg",
     },
   ],
   nenneh100: {

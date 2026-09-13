@@ -42,9 +42,9 @@ export default function ContactPage() {
 
       <MediaBand
         src="/media/img/portrait-candid.jpg"
-        alt="Nenneh Cheyassin Secka-Kebe in a white headwrap and embroidered white dress"
+        alt="Nenneh Cheyassin Secka-Kebe in white and gold lace with a gold necklace"
         height="h-[58svh]"
-        objectPosition="center 26%"
+        objectPosition="center 16%"
         art="portrait" tone="light"
       />
 

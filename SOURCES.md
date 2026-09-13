@@ -44,20 +44,17 @@ as what she is building, not as completed work.
    Foundation launch is the moment to correct the weaker one in a line and move on. A disputed
    infant-mortality figure from a February 2026 interview is deliberately not used anywhere.
 
-6. **Photography must be replaced.** The five images in `public/media/img/` are published
-   press and organisation photographs used as working placeholders so the build could be
-   reviewed. The content document is explicit that these should not ship — they belong to
-   those outlets and the site will look borrowed. An original shoot is needed:
+6. **Photography — now hers, with one exception.** Twenty-one of her own photographs were
+   supplied on 13 September 2026 and are in `public/media/img/`. Nine studio portraits (black
+   and gold grand boubou, turquoise lace, rose, brown and gold, white and gold) and twelve
+   documentary frames from the Farato borehole handover. The press portraits previously used as
+   placeholders have been deleted from the repository.
 
-   | Currently in use | Source | Replace with |
-   | --- | --- | --- |
-   | `portrait-hero.jpg` | Golden Era Party biography page | Formal editorial portrait |
-   | `portrait-seated.jpg` | The Point, 8 August 2025 | Seated three-quarter for the biography pin |
-   | `portrait-candid.jpg` | The Standard, 11 July 2025 | Candid |
-   | `work-utg-scholarship.jpg` | The Point, 3 September 2025 | Her own documentation of the work |
-   | `work-farato-borehole.png` | The Point, 2 September 2025 | Her own documentation of the work |
+   Still a press photograph: `work-utg-scholarship.jpg` (The Point, 3 September 2025), used on
+   `/about` under Philanthropy and as the Education & Opportunity pillar. Replace it with her own
+   documentation of the UTG presentation, or secure permission.
 
-   Beneficiaries who appear must have agreed in writing.
+   Beneficiaries who appear in the Farato photographs must have agreed in writing before launch.
 
 7. **Contact addresses must exist.** `hello@`, `foundation@` and `press@nennehcheyassin.com`
    are set live on `/contact`. Create the mailboxes or change the addresses.
@@ -73,7 +70,13 @@ social-media exports rather than camera originals, so each needed work:
 | File | Where | Notes |
 | --- | --- | --- |
 | `farato-nenneh-crowd.mp4` / `.webm` | Home, "The day the tank was finished" | Recovered from a letterboxed landscape shot inside a vertical reel. Native resolution is only 464×314, so it is shown contained — it cannot go full-bleed without visible softness. 12s, muted, poster frame. |
-| `farato-celebration.mp4` | Foundation, "Water, and what it changes" | Had a burned-in social caption ("Finally The Tank Is Done" plus an emoji) across the top; cropped out, since the brief bans emoji and it read as an Instagram repost. Trimmed to 28s from 1m41s. Vertical 9:16, so shown portrait. 5.3MB — the heaviest asset on the site. |
+| `farato-celebration.mp4` | Foundation and the Farato section | Had a burned-in social caption ("Finally The Tank Is Done" plus an emoji) across the top; cropped out, since the brief bans emoji and it read as an Instagram repost. Trimmed to 28s from 1m41s. Vertical 9:16, so shown portrait. 5.3MB — the heaviest asset on the site. |
+
+A third clip supplied on 13 September (`VIDEO-2026-09-13-13-48-37.mp4`) was **not** used. Despite a
+landscape container it carries rotation metadata and plays vertical, and the content is handheld
+indoor party footage — motion-blurred, low light, a performer at a microphone. It is weaker than
+both clips above and does not match the register of the rest of the site. Say where you want it and
+it can go in; otherwise it is better left out.
 
 WebM is supplied only where it actually beat the MP4 on size; on the celebration clip VP9 came
 out 20% larger at equivalent quality, so that one ships MP4 only.
@@ -90,5 +93,9 @@ social content all cut from it.
   paths in `public/media/video/`. Drop the files in and they swap automatically.
 - **Writing.** Six essay titles are listed on `/journal`; none are written yet. The site notes
   the first is in preparation.
-- **Foundation imagery.** Two of the three pillar images (`foundation-01.jpg`,
-  `foundation-03.jpg`) have no asset yet and render as placeholders.
+- **Foundation imagery** now uses real Farato photographs for Women & Wealth and Health & Dignity.
+- **Nenneh 100 portraits.** The eight-portrait wall was removed: the first cohort has not been
+  selected, so there are no beneficiaries to photograph. Captioning the Farato gardeners as Nenneh
+  100 women would have misrepresented them. The section now says portraits will follow.
+- **Archive.** The two slots on `/about` for her father and family are still empty and render as
+  placeholders. Those are the family photographs the content document says to request.
