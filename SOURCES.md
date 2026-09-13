@@ -65,12 +65,29 @@ as what she is building, not as completed work.
 8. **Name.** Standardised on Nenneh Cheyassin Secka-Kebe throughout, per the content document,
    with "Nenneh Cheyassin Kebe" as `alternateName` in the Person schema.
 
+## Film supplied so far
+
+Two clips from the Farato borehole handover are in and live on the site. Both arrived as
+social-media exports rather than camera originals, so each needed work:
+
+| File | Where | Notes |
+| --- | --- | --- |
+| `farato-nenneh-crowd.mp4` / `.webm` | Home, "The day the tank was finished" | Recovered from a letterboxed landscape shot inside a vertical reel. Native resolution is only 464×314, so it is shown contained — it cannot go full-bleed without visible softness. 12s, muted, poster frame. |
+| `farato-celebration.mp4` | Foundation, "Water, and what it changes" | Had a burned-in social caption ("Finally The Tank Is Done" plus an emoji) across the top; cropped out, since the brief bans emoji and it read as an Instagram repost. Trimmed to 28s from 1m41s. Vertical 9:16, so shown portrait. 5.3MB — the heaviest asset on the site. |
+
+WebM is supplied only where it actually beat the MP4 on size; on the celebration clip VP9 came
+out 20% larger at equivalent quality, so that one ships MP4 only.
+
+**Worth asking for:** the camera originals behind these reels. The stills from the same day are
+clearly professional, so properly shot footage almost certainly exists — it would be higher
+resolution, landscape, and free of social captions. The single most valuable asset remains one
+long, properly shot sit-down interview: the hero, the pull quotes, the series and months of
+social content all cut from it.
+
 ## Still to come
 
-- **Film.** Nine video slots render as generated indigo textile placeholders until real clips
-  land at the paths in `public/media/video/`. Drop the files in and they swap automatically;
-  no code change needed. The single most valuable asset is one long, properly shot sit-down
-  interview — the hero, the pull quotes, the series and months of social content all cut from it.
+- **Remaining film slots** render as generated textile placeholders until clips land at the
+  paths in `public/media/video/`. Drop the files in and they swap automatically.
 - **Writing.** Six essay titles are listed on `/journal`; none are written yet. The site notes
   the first is in preparation.
 - **Foundation imagery.** Two of the three pillar images (`foundation-01.jpg`,

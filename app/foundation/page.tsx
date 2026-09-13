@@ -3,6 +3,7 @@ import Section, { SectionLabel } from "@/components/Section";
 import ClipReveal from "@/components/ClipReveal";
 import Parallax from "@/components/Parallax";
 import MediaBand from "@/components/MediaBand";
+import VideoFeature from "@/components/VideoFeature";
 import MediaImage from "@/components/media/MediaImage";
 import MediaVideo from "@/components/media/MediaVideo";
 import { foundation } from "@/lib/content";
@@ -35,12 +36,14 @@ export default function FoundationPage() {
         </p>
       </Section>
 
-      <MediaBand
-        src="/media/video/foundation-field.mp4"
-        kind="video"
-        alt="Field footage from the Foundation's work"
-        height="h-[70svh]"
-        art="scene" tone="light"
+      <VideoFeature
+        src="/media/video/farato-celebration.mp4"
+        poster="/media/img/poster-farato-celebration.jpg"
+        alt="Women of the Farato farming community at the new borehole"
+        label="Health &amp; Dignity"
+        heading="Water, and what it changes."
+        body="Farato: a borehole for the women&rsquo;s farming community, providing irrigation for the gardens and filtered drinking water."
+        reverse
       />
 
       <Section as="div" className="bg-chalk">

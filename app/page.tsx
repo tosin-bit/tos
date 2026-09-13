@@ -9,6 +9,7 @@ import QuoteWallSection from "@/components/sections/QuoteWallSection";
 import JournalSection from "@/components/sections/JournalSection";
 import ClosingSection from "@/components/sections/ClosingSection";
 import MediaBand from "@/components/MediaBand";
+import VideoFeature from "@/components/VideoFeature";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -20,12 +21,16 @@ export default function HomePage() {
       <HeroSection />
       <IntroSection />
 
-      <MediaBand
-        src="/media/video/statement-broll.mp4"
-        kind="video"
-        alt="Ambient footage of Nenneh Cheyassin Secka-Kebe"
-        height="h-[78svh]"
-        art="scene"
+      <VideoFeature
+        src="/media/video/farato-nenneh-crowd.mp4"
+        webmSrc="/media/video/farato-nenneh-crowd.webm"
+        poster="/media/img/poster-farato-crowd.jpg"
+        alt="Nenneh Cheyassin Secka-Kebe with the women of Farato as the borehole is handed over"
+        label="Farato"
+        heading="The day the tank was finished."
+        body="The borehole at Farato gives the women's farming community irrigation for the gardens and filtered drinking water. This is the handover."
+        aspect="464 / 314"
+        maxWidth="max-w-[34rem]"
       />
 
       <FeaturedFoundationSection />
