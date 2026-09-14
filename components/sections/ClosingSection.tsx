@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "@/components/Logo";
 import { closing } from "@/lib/content";
 
 export default function ClosingSection() {
@@ -18,6 +19,7 @@ export default function ClosingSection() {
         }}
       />
       <div className="absolute inset-x-0 bottom-0 z-10 px-gutter pb-16">
+        <Logo decorative className="mb-8 h-14 w-14 text-brass" />
         <p className="font-display text-[clamp(2.5rem,7vw,6rem)] leading-none text-ecru">
           {closing.line}
         </p>
