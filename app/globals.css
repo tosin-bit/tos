@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Hard ban: rounded cards, border-radius 0 everywhere except the custom
+  cursor circle, which sets its own border-radius inline. Enforced by
+  convention below, not a blanket override, so the cursor can round itself.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
+html {
+  background: #1c1b3a;
+}
+
+body {
+  background-color: theme("colors.indigo");
+  color: theme("colors.ecru");
+  font-family: theme("fontFamily.body");
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: theme("colors.brass");
+  color: theme("colors.indigo");
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid theme("colors.brass");
+  outline-offset: 4px;
+}
+
+/* Line-mask reveal primitives */
+.line-mask {
+  overflow: hidden;
+}
+
+.line-mask > * {
+  will-change: transform;
+}
+
+/* Custom cursor: hidden on touch devices, default cursor restored */
+.has-custom-cursor,
+.has-custom-cursor * {
+  cursor: none;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .has-custom-cursor,
+  .has-custom-cursor * {
+    cursor: auto;
+  }
+}
+
+/* Horizontal gallery scrollbar (kept, but styled quietly) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
